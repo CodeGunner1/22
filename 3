@@ -1,1 +1,26 @@
-// ERROR
+// EJERCICICO 3
+function ReemplazarE(cad: string): string;
+var
+  i, cant: Integer;
+  nuevaCad: string;
+begin
+  cant := 0;
+  nuevaCad := '';
+
+  for i := 1 to Length(cad) do
+  begin
+    if cad[i] = 'e' then
+    begin
+      nuevaCad := nuevaCad + '#';
+      Inc(cant);
+    end
+    else
+      nuevaCad := nuevaCad + cad[i];
+  end;
+
+  Result := nuevaCad + ' - ' + IntToStr(cant) + ' letras fueron reemplazadas';
+end;
+
+//LLAMADA
+
+  Edit3.Text := ReemplazarE(cad);
